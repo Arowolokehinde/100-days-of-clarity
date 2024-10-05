@@ -1,0 +1,30 @@
+[project]
+name = "100-days-clarity"
+authors = []
+description = ""
+telemetry = true
+requirements = []
+[contracts.clarity-basics-i]
+path = "contracts/clarity-basics-i.clar"
+depends_on = []
+
+[contracts.clarity-basics-ii]
+path = "contracts/clarity-basics-ii.clar"
+depends_on = []
+
+[contracts.community-hello-world]
+path = "contracts/community-hello-world.clar"
+depends_on = []
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
