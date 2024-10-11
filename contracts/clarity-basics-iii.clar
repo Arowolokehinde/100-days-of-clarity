@@ -51,3 +51,60 @@
         (err u0))
     ))
 )
+
+;; Day 22 - Unwrapping
+;; unwrap! - accepts optionals or response
+;; unwrap-err! - response
+;; unwrap-panic - optional & response
+;; unwrap-err-panic - optional & response
+;; try! - optionals & response
+
+
+(define-public (unwrap-example (new-num uint))
+    (ok (var-set list-day-21
+        (unwrap!
+            (as-max-len? (append (var-get list-day-21) new-num) u5)
+        (err "error list at max-len"))
+    ))
+)
+
+
+(define-public (unwrap-panic-example (new-num uint))
+    (ok (var-set list-day-21
+        (unwrap-panic (as-max-len? (append (var-get list-day-21) new-num) u5))
+    ))
+)
+
+(define-public (unwrap-err-example (input (response uint uint)))
+    (ok (unwrap-err! input (err u10)))
+)
+
+(define-public (try-example (input (response uint uint)))
+    (ok (try! input))
+)
+
+;; Day 23 - Get & Default-to
+
+
+(define-constant example-tuple (some {
+    example-bool: true,
+    example-num: u11,
+    example-string: "expale",
+    example-principal: tx-sender
+}))
+
+(define-read-only (read-example-bool)
+    (get example-bool example-tuple)
+)
+
+(define-read-only (read-example-string)
+    (default-to "example" (get example-string example-tuple))
+)
+
+(define-read-only (read-example-num)
+    (default-to u10 (get example-num example-tuple))
+)
+
+(define-read-only (read-example-principal)
+    (get example-principal example-tuple)
+)
