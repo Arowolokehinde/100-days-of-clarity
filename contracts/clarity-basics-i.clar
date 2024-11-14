@@ -19,10 +19,6 @@
 
 ;; Day4 - Simple Operators
 
-
-
-
-
 (define-read-only (add)
     (+ u1 u2 )
 )

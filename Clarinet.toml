@@ -4,6 +4,10 @@ authors = []
 description = ""
 telemetry = true
 requirements = []
+[contracts.artist-discorgraphy]
+path = "contracts/artist-discorgraphy.clar"
+depends_on = []
+
 [contracts.clarity-basics-i]
 path = "contracts/clarity-basics-i.clar"
 depends_on = []
@@ -12,8 +16,24 @@ depends_on = []
 path = "contracts/clarity-basics-ii.clar"
 depends_on = []
 
+[contracts.clarity-basics-iii]
+path = "contracts/clarity-basics-iii.clar"
+depends_on = []
+
+[contracts.clarity-basics-iv]
+path = "contracts/clarity-basics-iv.clar"
+depends_on = []
+
+[contracts.clarity-basics-v]
+path = "contracts/clarity-basics-v.clar"
+depends_on = []
+
 [contracts.community-hello-world]
 path = "contracts/community-hello-world.clar"
+depends_on = []
+
+[contracts.offspring-will]
+path = "contracts/offspring-will.clar"
 depends_on = []
 
 [repl]
